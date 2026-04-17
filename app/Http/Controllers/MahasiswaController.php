@@ -48,17 +48,23 @@ class MahasiswaController
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Mahasiswa $mahasiswa)
+    public function edit($id)
     {
-        //
+        return view('mahasiswa.edit', [
+            'mahasiswa' => Mahasiswa::find($id)
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Mahasiswa $mahasiswa)
+    public function update(Request $request, $id)
     {
-        //
+        $data = $request->except('_token');
+
+        Mahasiswa::find($id)->update($data);
+
+        return redirect()->action([MahasiswaController::class, 'index']);
     }
 
     /**

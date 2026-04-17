@@ -25,10 +25,3 @@
         </tr>
     </table>
 </form>
-
-<div>
-    <ul>
-    <li>Buatlah sebuah View dengan nama mahasiswa/create</li>
-    <li>Return View tersebut pada MahasiswaController fungsi create()</li>
-    <li>Tambahkan Route mahasiswa-create ke fungsi create tersebut</li>
-</ul>
